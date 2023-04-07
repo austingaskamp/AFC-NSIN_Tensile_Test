@@ -44,7 +44,8 @@ namespace LoadCell_OwnProgram
         private void StopButton_Click(object sender, EventArgs e)
         {
             Task stoppingDataTask = Task.Run(() => testingClass.StoppingTest()); // Runs StoppingTest() from TestingClass.cs
-            //closes GUI
+
+            //closes GUI - do we really want the GUI to close when you press stop? 
             this.Close();
             Application.Exit();
         }
