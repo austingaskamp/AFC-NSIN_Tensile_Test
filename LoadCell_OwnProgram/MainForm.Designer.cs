@@ -28,10 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea15 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Series series15 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea16 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Series series16 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.StartButton = new System.Windows.Forms.Button();
             this.StopButton = new System.Windows.Forms.Button();
             this.ResultsLab = new System.Windows.Forms.Label();
@@ -78,6 +78,7 @@
             this.label20 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).BeginInit();
@@ -86,6 +87,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.ForceChart)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.StressChart)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // StartButton
@@ -119,7 +121,7 @@
             this.ResultsLab.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.6F);
             this.ResultsLab.Location = new System.Drawing.Point(299, 345);
             this.ResultsLab.Name = "ResultsLab";
-            this.ResultsLab.Size = new System.Drawing.Size(226, 57);
+            this.ResultsLab.Size = new System.Drawing.Size(160, 39);
             this.ResultsLab.TabIndex = 2;
             this.ResultsLab.Text = "Force [N]";
             // 
@@ -129,7 +131,7 @@
             this.ForceLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.6F);
             this.ForceLabel.Location = new System.Drawing.Point(299, 402);
             this.ForceLabel.Name = "ForceLabel";
-            this.ForceLabel.Size = new System.Drawing.Size(88, 57);
+            this.ForceLabel.Size = new System.Drawing.Size(62, 39);
             this.ForceLabel.TabIndex = 3;
             this.ForceLabel.Text = "[N]";
             // 
@@ -138,7 +140,7 @@
             this.numericUpDown1.DecimalPlaces = 2;
             this.numericUpDown1.Location = new System.Drawing.Point(50, 136);
             this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(120, 29);
+            this.numericUpDown1.Size = new System.Drawing.Size(120, 22);
             this.numericUpDown1.TabIndex = 4;
             this.numericUpDown1.Value = new decimal(new int[] {
             5,
@@ -152,7 +154,7 @@
             this.numericUpDown2.DecimalPlaces = 2;
             this.numericUpDown2.Location = new System.Drawing.Point(50, 199);
             this.numericUpDown2.Name = "numericUpDown2";
-            this.numericUpDown2.Size = new System.Drawing.Size(120, 29);
+            this.numericUpDown2.Size = new System.Drawing.Size(120, 22);
             this.numericUpDown2.TabIndex = 5;
             this.numericUpDown2.Value = new decimal(new int[] {
             1,
@@ -166,7 +168,7 @@
             this.numericUpDown3.DecimalPlaces = 2;
             this.numericUpDown3.Location = new System.Drawing.Point(50, 264);
             this.numericUpDown3.Name = "numericUpDown3";
-            this.numericUpDown3.Size = new System.Drawing.Size(120, 29);
+            this.numericUpDown3.Size = new System.Drawing.Size(120, 22);
             this.numericUpDown3.TabIndex = 6;
             this.numericUpDown3.Value = new decimal(new int[] {
             1,
@@ -180,7 +182,7 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(31, 108);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(185, 25);
+            this.label2.Size = new System.Drawing.Size(124, 16);
             this.label2.TabIndex = 7;
             this.label2.Text = "Gauge Length [mm]";
             // 
@@ -189,7 +191,7 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(31, 231);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(215, 25);
+            this.label3.Size = new System.Drawing.Size(146, 16);
             this.label3.TabIndex = 8;
             this.label3.Text = "Gauge Thickness [mm]";
             // 
@@ -198,7 +200,7 @@
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(31, 171);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(176, 25);
+            this.label4.Size = new System.Drawing.Size(118, 16);
             this.label4.TabIndex = 9;
             this.label4.Text = "Gauge Width [mm]";
             // 
@@ -207,7 +209,7 @@
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(31, 300);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(152, 25);
+            this.label5.Size = new System.Drawing.Size(102, 16);
             this.label5.TabIndex = 10;
             this.label5.Text = "Strain Rate [1/s]";
             // 
@@ -216,7 +218,7 @@
             this.numericUpDown4.DecimalPlaces = 3;
             this.numericUpDown4.Location = new System.Drawing.Point(50, 328);
             this.numericUpDown4.Name = "numericUpDown4";
-            this.numericUpDown4.Size = new System.Drawing.Size(120, 29);
+            this.numericUpDown4.Size = new System.Drawing.Size(120, 22);
             this.numericUpDown4.TabIndex = 11;
             this.numericUpDown4.Value = new decimal(new int[] {
             1,
@@ -231,7 +233,7 @@
             this.StressOutput.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.64286F);
             this.StressOutput.Location = new System.Drawing.Point(299, 459);
             this.StressOutput.Name = "StressOutput";
-            this.StressOutput.Size = new System.Drawing.Size(307, 57);
+            this.StressOutput.Size = new System.Drawing.Size(217, 39);
             this.StressOutput.TabIndex = 12;
             this.StressOutput.Text = "Stress [MPa]";
             // 
@@ -241,17 +243,16 @@
             this.StressLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.64286F);
             this.StressLabel.Location = new System.Drawing.Point(299, 516);
             this.StressLabel.Name = "StressLabel";
-            this.StressLabel.Size = new System.Drawing.Size(154, 57);
+            this.StressLabel.Size = new System.Drawing.Size(108, 39);
             this.StressLabel.TabIndex = 13;
             this.StressLabel.Text = "[MPa]";
-
             // 
             // numericUpDown5
             // 
             this.numericUpDown5.DecimalPlaces = 2;
             this.numericUpDown5.Location = new System.Drawing.Point(50, 390);
             this.numericUpDown5.Name = "numericUpDown5";
-            this.numericUpDown5.Size = new System.Drawing.Size(120, 29);
+            this.numericUpDown5.Size = new System.Drawing.Size(120, 22);
             this.numericUpDown5.TabIndex = 14;
             this.numericUpDown5.Value = new decimal(new int[] {
             5,
@@ -265,7 +266,7 @@
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(31, 360);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(193, 25);
+            this.label6.Size = new System.Drawing.Size(131, 16);
             this.label6.TabIndex = 15;
             this.label6.Text = "Acquisition Rate [Hz]";
             // 
@@ -294,7 +295,7 @@
             this.TimeOutput.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.64286F);
             this.TimeOutput.Location = new System.Drawing.Point(299, 108);
             this.TimeOutput.Name = "TimeOutput";
-            this.TimeOutput.Size = new System.Drawing.Size(201, 57);
+            this.TimeOutput.Size = new System.Drawing.Size(142, 39);
             this.TimeOutput.TabIndex = 17;
             this.TimeOutput.Text = "Time [s]";
             // 
@@ -304,10 +305,9 @@
             this.TimeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.64286F);
             this.TimeLabel.Location = new System.Drawing.Point(299, 165);
             this.TimeLabel.Name = "TimeLabel";
-            this.TimeLabel.Size = new System.Drawing.Size(78, 57);
+            this.TimeLabel.Size = new System.Drawing.Size(55, 39);
             this.TimeLabel.TabIndex = 18;
             this.TimeLabel.Text = "[s]";
-
             // 
             // DispLabel
             // 
@@ -315,7 +315,7 @@
             this.DispLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.64286F);
             this.DispLabel.Location = new System.Drawing.Point(299, 288);
             this.DispLabel.Name = "DispLabel";
-            this.DispLabel.Size = new System.Drawing.Size(121, 57);
+            this.DispLabel.Size = new System.Drawing.Size(86, 39);
             this.DispLabel.TabIndex = 19;
             this.DispLabel.Text = "[um]";
             // 
@@ -325,7 +325,7 @@
             this.DispOutput.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.64286F);
             this.DispOutput.Location = new System.Drawing.Point(299, 231);
             this.DispOutput.Name = "DispOutput";
-            this.DispOutput.Size = new System.Drawing.Size(433, 57);
+            this.DispOutput.Size = new System.Drawing.Size(307, 39);
             this.DispOutput.TabIndex = 20;
             this.DispOutput.Text = "Displacement [um]";
             // 
@@ -335,7 +335,7 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.64286F);
             this.label1.Location = new System.Drawing.Point(898, 113);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(253, 57);
+            this.label1.Size = new System.Drawing.Size(179, 39);
             this.label1.TabIndex = 21;
             this.label1.Text = "Temp1 [C]";
             // 
@@ -345,7 +345,7 @@
             this.Temp1Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.64286F);
             this.Temp1Label.Location = new System.Drawing.Point(898, 165);
             this.Temp1Label.Name = "Temp1Label";
-            this.Temp1Label.Size = new System.Drawing.Size(121, 57);
+            this.Temp1Label.Size = new System.Drawing.Size(86, 39);
             this.Temp1Label.TabIndex = 22;
             this.Temp1Label.Text = "[um]";
             // 
@@ -355,7 +355,7 @@
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.64286F);
             this.label7.Location = new System.Drawing.Point(898, 231);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(253, 57);
+            this.label7.Size = new System.Drawing.Size(179, 39);
             this.label7.TabIndex = 23;
             this.label7.Text = "Temp2 [C]";
             // 
@@ -365,7 +365,7 @@
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.64286F);
             this.label8.Location = new System.Drawing.Point(898, 345);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(253, 57);
+            this.label8.Size = new System.Drawing.Size(179, 39);
             this.label8.TabIndex = 24;
             this.label8.Text = "Temp3 [C]";
             // 
@@ -375,7 +375,7 @@
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.64286F);
             this.label9.Location = new System.Drawing.Point(898, 459);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(253, 57);
+            this.label9.Size = new System.Drawing.Size(179, 39);
             this.label9.TabIndex = 25;
             this.label9.Text = "Temp4 [C]";
             // 
@@ -385,10 +385,9 @@
             this.Temp2Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.64286F);
             this.Temp2Label.Location = new System.Drawing.Point(898, 288);
             this.Temp2Label.Name = "Temp2Label";
-            this.Temp2Label.Size = new System.Drawing.Size(121, 57);
+            this.Temp2Label.Size = new System.Drawing.Size(86, 39);
             this.Temp2Label.TabIndex = 26;
             this.Temp2Label.Text = "[um]";
-
             // 
             // Temp3Label
             // 
@@ -396,10 +395,9 @@
             this.Temp3Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.64286F);
             this.Temp3Label.Location = new System.Drawing.Point(898, 402);
             this.Temp3Label.Name = "Temp3Label";
-            this.Temp3Label.Size = new System.Drawing.Size(121, 57);
+            this.Temp3Label.Size = new System.Drawing.Size(86, 39);
             this.Temp3Label.TabIndex = 27;
             this.Temp3Label.Text = "[um]";
-
             // 
             // Temp4Label
             // 
@@ -407,35 +405,34 @@
             this.Temp4Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.64286F);
             this.Temp4Label.Location = new System.Drawing.Point(898, 516);
             this.Temp4Label.Name = "Temp4Label";
-            this.Temp4Label.Size = new System.Drawing.Size(121, 57);
+            this.Temp4Label.Size = new System.Drawing.Size(86, 39);
             this.Temp4Label.TabIndex = 28;
             this.Temp4Label.Text = "[um]";
-
             // 
             // ForceChart
             // 
-            chartArea15.Name = "ChartArea1";
-            this.ForceChart.ChartAreas.Add(chartArea15);
+            chartArea1.Name = "ChartArea1";
+            this.ForceChart.ChartAreas.Add(chartArea1);
             this.ForceChart.Location = new System.Drawing.Point(2, 588);
             this.ForceChart.Name = "ForceChart";
-            series15.ChartArea = "ChartArea1";
-            series15.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series15.Name = "Force vs Displacement";
-            this.ForceChart.Series.Add(series15);
+            series1.ChartArea = "ChartArea1";
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series1.Name = "Force vs Displacement";
+            this.ForceChart.Series.Add(series1);
             this.ForceChart.Size = new System.Drawing.Size(864, 366);
             this.ForceChart.TabIndex = 29;
             this.ForceChart.Text = "sldfhjoisjf";
             // 
             // StressChart
             // 
-            chartArea16.Name = "ChartArea1";
-            this.StressChart.ChartAreas.Add(chartArea16);
+            chartArea2.Name = "ChartArea1";
+            this.StressChart.ChartAreas.Add(chartArea2);
             this.StressChart.Location = new System.Drawing.Point(872, 588);
             this.StressChart.Name = "StressChart";
-            series16.ChartArea = "ChartArea1";
-            series16.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series16.Name = "Stress vs Displacement";
-            this.StressChart.Series.Add(series16);
+            series2.ChartArea = "ChartArea1";
+            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series2.Name = "Stress vs Displacement";
+            this.StressChart.Series.Add(series2);
             this.StressChart.Size = new System.Drawing.Size(860, 366);
             this.StressChart.TabIndex = 30;
             this.StressChart.Text = "sldfhjoisjf";
@@ -517,7 +514,7 @@
             this.numericUpDown6.DecimalPlaces = 2;
             this.numericUpDown6.Location = new System.Drawing.Point(50, 450);
             this.numericUpDown6.Name = "numericUpDown6";
-            this.numericUpDown6.Size = new System.Drawing.Size(120, 29);
+            this.numericUpDown6.Size = new System.Drawing.Size(120, 22);
             this.numericUpDown6.TabIndex = 39;
             this.numericUpDown6.Value = new decimal(new int[] {
             5,
@@ -531,7 +528,7 @@
             this.label18.AutoSize = true;
             this.label18.Location = new System.Drawing.Point(31, 422);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(106, 25);
+            this.label18.Size = new System.Drawing.Size(69, 16);
             this.label18.TabIndex = 40;
             this.label18.Text = "Max Strain";
             // 
@@ -540,7 +537,7 @@
             this.label19.AutoSize = true;
             this.label19.Location = new System.Drawing.Point(141, 482);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(85, 25);
+            this.label19.Size = new System.Drawing.Size(56, 16);
             this.label19.TabIndex = 41;
             this.label19.Text = "Actuator";
             // 
@@ -549,7 +546,7 @@
             this.label20.AutoSize = true;
             this.label20.Location = new System.Drawing.Point(12, 482);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(138, 25);
+            this.label20.Size = new System.Drawing.Size(95, 16);
             this.label20.TabIndex = 42;
             this.label20.Text = "Thermocouple";
             // 
@@ -557,7 +554,7 @@
             // 
             this.textBox1.Location = new System.Drawing.Point(17, 510);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 29);
+            this.textBox1.Size = new System.Drawing.Size(100, 22);
             this.textBox1.TabIndex = 43;
             this.textBox1.Text = "COM9";
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
@@ -566,15 +563,24 @@
             // 
             this.textBox2.Location = new System.Drawing.Point(146, 510);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 29);
+            this.textBox2.Size = new System.Drawing.Size(100, 22);
             this.textBox2.TabIndex = 44;
             this.textBox2.Text = "COM10";
             this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Location = new System.Drawing.Point(1193, 142);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(528, 270);
+            this.pictureBox1.TabIndex = 45;
+            this.pictureBox1.TabStop = false;
             // 
             // MainForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(1945, 966);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label20);
@@ -630,6 +636,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.ForceChart)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.StressChart)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -683,5 +690,6 @@
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

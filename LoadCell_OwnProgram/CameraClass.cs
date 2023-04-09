@@ -142,7 +142,7 @@ namespace LoadCell_OwnProgram
                                     String filename = "Accquistion C-Sharp";
                                     if (deviceSerialNumber != "")
                                     {
-                                        filename = filename + deviceSerialNumber + "-";
+                                        filename = filename + "-";
                                     }
                                     filename = filename + imageCnt + ".jpg";
                                     convertedImage.Save(filename);

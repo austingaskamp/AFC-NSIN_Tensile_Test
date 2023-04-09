@@ -86,6 +86,9 @@ namespace LoadCell_OwnProgram
                     this.Invoke((MethodInvoker)delegate {
                         UpdateChart(TestingClass.displacement, TestingClass.force, TestingClass.stress);
                     });
+                    this.Invoke((MethodInvoker)delegate) {
+                        pictureBox1.Image = Image.From
+                    }
                 },
                 state: null,//timer stuff
                 dueTime: 0,//amount of time delay before the timer initially starts
@@ -106,6 +109,13 @@ namespace LoadCell_OwnProgram
                 StressChart.Series["Stress vs Displacement"].Points.AddXY(displacement, stress);
             });
         }
+        public void UpdateImage()
+        {
+            String filename = "";
+            pictureBox1.Image = Image.FromFile(filename);
+
+        }
+       
 //------------------------------------------------------------------------------------------------------------------------------------------
         //Default geometries, strainrate, and acquisiton rate. These values only change if user enters something new
         public static decimal length = 5;
