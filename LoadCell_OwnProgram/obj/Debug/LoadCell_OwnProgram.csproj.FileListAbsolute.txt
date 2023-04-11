@@ -230,3 +230,31 @@ C:\Users\Austin\OneDrive - Texas A&M University\Spring2023\04 MEEN 402\AFC-NSIN_
 C:\Users\Austin\OneDrive - Texas A&M University\Spring2023\04 MEEN 402\AFC-NSIN_Tensile_Test\LoadCell_OwnProgram\obj\Debug\LoadCell_OwnProgram.csproj.CopyComplete
 C:\Users\Austin\OneDrive - Texas A&M University\Spring2023\04 MEEN 402\AFC-NSIN_Tensile_Test\LoadCell_OwnProgram\obj\Debug\LoadCell_OwnProgram.exe
 C:\Users\Austin\OneDrive - Texas A&M University\Spring2023\04 MEEN 402\AFC-NSIN_Tensile_Test\LoadCell_OwnProgram\obj\Debug\LoadCell_OwnProgram.pdb
+C:\Users\shiva\source\repos\AFC-NSIN_Tensile_Test\LoadCell_OwnProgram\obj\Debug\LoadCell_OwnProgram.csproj.AssemblyReference.cache
+C:\Users\shiva\source\repos\AFC-NSIN_Tensile_Test\LoadCell_OwnProgram\obj\Debug\LoadCell_OwnProgram.csproj.SuggestedBindingRedirects.cache
+C:\Users\shiva\source\repos\AFC-NSIN_Tensile_Test\LoadCell_OwnProgram\obj\Debug\LoadCell_OwnProgram.MainForm.resources
+C:\Users\shiva\source\repos\AFC-NSIN_Tensile_Test\LoadCell_OwnProgram\obj\Debug\LoadCell_OwnProgram.Properties.Resources.resources
+C:\Users\shiva\source\repos\AFC-NSIN_Tensile_Test\LoadCell_OwnProgram\obj\Debug\LoadCell_OwnProgram.csproj.GenerateResource.cache
+C:\Users\shiva\source\repos\AFC-NSIN_Tensile_Test\LoadCell_OwnProgram\obj\Debug\LoadCell_OwnProgram.csproj.CoreCompileInputs.cache
+C:\Users\shiva\source\repos\AFC-NSIN_Tensile_Test\LoadCell_OwnProgram\obj\Debug\LoadCell_OwnProgram.exe
+C:\Users\shiva\source\repos\AFC-NSIN_Tensile_Test\LoadCell_OwnProgram\obj\Debug\LoadCell_OwnProgram.pdb
+C:\Users\shiva\source\repos\AFC-NSIN_Tensile_Test\LoadCell_OwnProgram\bin\Debug\zaber-motion-lib-windows-386.dll
+C:\Users\shiva\source\repos\AFC-NSIN_Tensile_Test\LoadCell_OwnProgram\bin\Debug\zaber-motion-lib-windows-amd64.dll
+C:\Users\shiva\source\repos\AFC-NSIN_Tensile_Test\LoadCell_OwnProgram\bin\Debug\LoadCell_OwnProgram.exe.config
+C:\Users\shiva\source\repos\AFC-NSIN_Tensile_Test\LoadCell_OwnProgram\bin\Debug\LoadCell_OwnProgram.exe
+C:\Users\shiva\source\repos\AFC-NSIN_Tensile_Test\LoadCell_OwnProgram\bin\Debug\LoadCell_OwnProgram.pdb
+C:\Users\shiva\source\repos\AFC-NSIN_Tensile_Test\LoadCell_OwnProgram\bin\Debug\FUTEK_USB_DLL.dll
+C:\Users\shiva\source\repos\AFC-NSIN_Tensile_Test\LoadCell_OwnProgram\bin\Debug\Google.Protobuf.dll
+C:\Users\shiva\source\repos\AFC-NSIN_Tensile_Test\LoadCell_OwnProgram\bin\Debug\SpinnakerNETd_v140.dll
+C:\Users\shiva\source\repos\AFC-NSIN_Tensile_Test\LoadCell_OwnProgram\bin\Debug\System.Buffers.dll
+C:\Users\shiva\source\repos\AFC-NSIN_Tensile_Test\LoadCell_OwnProgram\bin\Debug\System.Memory.dll
+C:\Users\shiva\source\repos\AFC-NSIN_Tensile_Test\LoadCell_OwnProgram\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\shiva\source\repos\AFC-NSIN_Tensile_Test\LoadCell_OwnProgram\bin\Debug\Zaber.Motion.dll
+C:\Users\shiva\source\repos\AFC-NSIN_Tensile_Test\LoadCell_OwnProgram\bin\Debug\FUTEK_USB_DLL.xml
+C:\Users\shiva\source\repos\AFC-NSIN_Tensile_Test\LoadCell_OwnProgram\bin\Debug\Google.Protobuf.pdb
+C:\Users\shiva\source\repos\AFC-NSIN_Tensile_Test\LoadCell_OwnProgram\bin\Debug\Google.Protobuf.xml
+C:\Users\shiva\source\repos\AFC-NSIN_Tensile_Test\LoadCell_OwnProgram\bin\Debug\System.Buffers.xml
+C:\Users\shiva\source\repos\AFC-NSIN_Tensile_Test\LoadCell_OwnProgram\bin\Debug\System.Memory.xml
+C:\Users\shiva\source\repos\AFC-NSIN_Tensile_Test\LoadCell_OwnProgram\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\shiva\source\repos\AFC-NSIN_Tensile_Test\LoadCell_OwnProgram\bin\Debug\Zaber.Motion.xml
+C:\Users\shiva\source\repos\AFC-NSIN_Tensile_Test\LoadCell_OwnProgram\obj\Debug\LoadCell_OwnProgram.csproj.CopyComplete

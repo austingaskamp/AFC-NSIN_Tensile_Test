@@ -20,7 +20,10 @@ namespace LoadCell_OwnProgram
     {
         // Create a new instance (variable) of the TestingClass within MainForm
         TestingClass testingClass = new TestingClass();
-
+        private System.Windows.Forms.Timer pictureTimer;
+        private int currentPictureIndex = 0;
+        private CameraClass camera = new CameraClass();
+        private Bitmap myImage;
         //Initialize Button. Moves grip to home position and runs "Initialize" thread from testing.cs
         private void InitializeButton_Click(object sender, EventArgs e)
         {
@@ -86,9 +89,10 @@ namespace LoadCell_OwnProgram
                     this.Invoke((MethodInvoker)delegate {
                         UpdateChart(TestingClass.displacement, TestingClass.force, TestingClass.stress);
                     });
-                    this.Invoke((MethodInvoker)delegate) {
-                        pictureBox1.Image = Image.From
-                    }
+                    this.Invoke((MethodInvoker)delegate
+                    {
+                        updatePicture();
+                    });
                 },
                 state: null,//timer stuff
                 dueTime: 0,//amount of time delay before the timer initially starts
@@ -109,14 +113,53 @@ namespace LoadCell_OwnProgram
                 StressChart.Series["Stress vs Displacement"].Points.AddXY(displacement, stress);
             });
         }
-        public void UpdateImage()
+        public void updatePicture()
         {
-            String filename = "";
-            pictureBox1.Image = Image.FromFile(filename);
-
+            //Thread.Sleep(10000);
+            List<String> filenames = camera.returnList();
+            for(int i = 0; i < filenames.Count; i++)
+            {
+                pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+                myImage = new Bitmap(filenames[i]);
+                pictureBox1.Image = (Image) myImage;
+            }
         }
-       
-//------------------------------------------------------------------------------------------------------------------------------------------
+        //private void StartUpdatingPictureBox()
+        //{
+        //    // Initialize the timer to fire every 5 seconds
+        //    pictureTimer = new System.Windows.Forms.Timer();
+        //    pictureTimer.Interval = 10000;
+        //    pictureTimer.Tick += PictureTimer_Tick;
+        //    pictureTimer.Start();
+
+        //    // Update the picture box with the first image
+        //    UpdatePictureBox();
+        //}
+
+        //private void PictureTimer_Tick(object sender, EventArgs e)
+        //{
+        //    // Update the picture box with the next image
+        //    currentPictureIndex++;
+        //    UpdatePictureBox();
+        //}
+
+        //private void UpdatePictureBox()
+        //{
+        //    // Construct the file name for the current picture
+        //    string fileName = $"Accquisition C-Sharp-{currentPictureIndex}.jpg";
+
+        //    // Check if the file exists
+        //    if (File.Exists(fileName))
+        //    {
+        //        // Load the image from the file
+        //        Image image = Image.FromFile(fileName);
+
+        //        // Display the image in the picture box
+        //        pictureBox1.Image = image;
+        //    }
+        //}
+
+        //------------------------------------------------------------------------------------------------------------------------------------------
         //Default geometries, strainrate, and acquisiton rate. These values only change if user enters something new
         public static decimal length = 5;
         public static decimal width = 1;
