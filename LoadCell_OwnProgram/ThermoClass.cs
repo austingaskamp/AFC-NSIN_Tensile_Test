@@ -12,7 +12,6 @@ namespace LoadCell_OwnProgram
         private string name = "Thermocouple Array";
         private string comPort = "COM9";
         private int buadRate = 115200; //DO NOT CHANGE uncless arduino sketch is changed as well
-        //private SerialPort serialPort = new SerialPort(comPort, buadRate); // update comPort var with the serial port of your Arduino board
         private SerialPort serialPort;
 
         private List<float> tc1Data = new List<float>(); //TC1 data structure
@@ -25,16 +24,12 @@ namespace LoadCell_OwnProgram
         {
 
             serialPort = new SerialPort("COM9", 115200);
-            Console.WriteLine("Default constructor");
-            Console.WriteLine("Serial port status: " + serialPort.IsOpen);
-            serialPort.Open();
+            serialPort.Open(); //Will throw 'System.IO.IOException' if the COM port does not exist
         }
         public ThermoClass(string comPort)//opening com port
         {
             serialPort = new SerialPort(comPort, 115200);
-            Console.WriteLine("Parametrized constructor");
-            Console.WriteLine("Serial port status: " + serialPort.IsOpen);
-            serialPort.Open();
+            serialPort.Open(); //Will throw 'System.IO.IOException' if the COM port does not exist
         }
 
         //Get and set functions for name
@@ -137,17 +132,15 @@ namespace LoadCell_OwnProgram
         public List<float> getCurrentTemps()
         {
 
-            Console.WriteLine("getCurrentTemps is called.");
-
             if (this.serialPort.BytesToRead > 0)
             {
-                Console.WriteLine("getCurrentTemps works!");
                 string data = serialPort.ReadLine().Trim();
                 List<float> currentTemps = new List<float>();
 
                 foreach (string str in data.Split(','))
                 {
                     float temp;
+
                     if (float.TryParse(str, out temp))
                     {
                         currentTemps.Add(temp);

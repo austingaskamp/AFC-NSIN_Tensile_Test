@@ -15,6 +15,7 @@ namespace LoadCell_OwnProgram
 {
     internal class CameraClass
     {
+        public static List<String> imageFiles = new List<String>();
         static int ConfigGVCPHeartBeat(IManagedCamera cam, bool enable)
         {
             INodeMap nodeMapTLDevice = cam.GetTLDeviceNodeMap();
@@ -104,7 +105,7 @@ namespace LoadCell_OwnProgram
                 // Set symbolic from entry node as new value for enumeration node
                 iAcquisitionMode.Value = iAcquisitionModeContinuous.Symbolic;
 
-                MessageBox.Show("Acquisition mode set to continuous...");
+                //MessageBox.Show("Acquisition mode set to continuous...");
 
                 cam.BeginAcquisition();
 
@@ -117,7 +118,7 @@ namespace LoadCell_OwnProgram
                 {
                     deviceSerialNumber = iDeviceSerialNumber.Value;
 
-                    MessageBox.Show("Device serial number retrieved as {0}...", deviceSerialNumber);
+                    //MessageBox.Show("Device serial number retrieved as {0}...", deviceSerialNumber);
                 }
                 IManagedImageProcessor processor = new ManagedImageProcessor();
                 processor.SetColorProcessing(ColorProcessingAlgorithm.HQ_LINEAR);
@@ -142,10 +143,11 @@ namespace LoadCell_OwnProgram
                                     String filename = "Accquistion C-Sharp";
                                     if (deviceSerialNumber != "")
                                     {
-                                        filename = filename + deviceSerialNumber + "-";
+                                        filename = filename + "-";
                                     }
                                     filename = filename + imageCnt + ".jpg";
                                     convertedImage.Save(filename);
+                                    imageFiles.Add(filename);
                                 }
 
                             }
@@ -169,6 +171,10 @@ namespace LoadCell_OwnProgram
             return result;
         }
 
+        public List<string> returnList()
+        {
+            return imageFiles;
+        }
         public int RunSingleCamera(IManagedCamera cam)
         {
             int result = 0;

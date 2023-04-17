@@ -9,6 +9,11 @@ namespace LoadCell_OwnProgram
 {
     public class LoadCellClass
     {
+
+        //Should likely add similar variables to what is in thermocouple class
+        //Data array for load cell data
+
+
         private IntPtr DeviceHandle;
         private int DeviceStatus;
         private string t_Off_Val;
@@ -26,6 +31,8 @@ namespace LoadCell_OwnProgram
         public Double CalcVal;
         public void LoadCell(decimal width, decimal thick, ref double force, ref double stress)
         {
+
+            //This block of code should be used in an 'initializeLoadCell' function
             FUTEK_USB_DLL.USB_DLL futek = new FUTEK_USB_DLL.USB_DLL();
             // Connect to load cell
             futek.Open_Device_Connection("538827");
@@ -35,6 +42,8 @@ namespace LoadCell_OwnProgram
             }
             DeviceHandle = futek.DeviceHandle;
 
+
+            //This block of code should be used in a 'getLoadCellData' function
             while (true) //main loop that runs the functions
             {
                 //Load cell initialization
