@@ -37,10 +37,10 @@ namespace LoadCell_OwnProgram
         private void StartButton_Click(object sender, EventArgs e)
         {
             StartButton.Enabled = false; // Disable the start button
-            // Create three separate tasks to run StoringData and RunningTest from TestingClass.cs and run updateGuiTask from in this class
+            testingClass.Preload(); //idea is to not run a task so that preload has to run till completion before the next two tasks can start running
+            // Create two separate tasks to run StoringData and RunningTest from TestingClass.cs
             Task storingDataTask = Task.Run(() => testingClass.StoringData());
             Task runningTestTask = Task.Run(() => testingClass.RunningTest());
-
         }
 
         //Stop Button.
@@ -167,6 +167,7 @@ namespace LoadCell_OwnProgram
         public static decimal strainrate = .001m; // default is 10^-3 [1/s]
         public static decimal acq_rate = 0.5m; //default acquisiton rate set to 0.5 Hz
         public static decimal max_strain = 0.5m;
+        public static double preload = 1.0;
         public static string tc_com = "COM9"; //default com port. to change default change this, and can change text box properties to make visual default align with this
         public static string act_com = "COM10"; //default actuator port
 
@@ -194,6 +195,10 @@ namespace LoadCell_OwnProgram
         private void numericUpDown6_ValueChanged(object sender, EventArgs e)
         {
             max_strain = (decimal)numericUpDown6.Value;
+        }
+        private void numericUpDown7_ValueChanged(object sender, EventArgs e)
+        {
+            preload = (double)numericUpDown7.Value;
         }
         public void textBox1_TextChanged(object sender, EventArgs e) //TC Com Port
         {

@@ -63,8 +63,29 @@ namespace LoadCell_OwnProgram
             Task loadCellTask = Task.Run(() => loadCell.LoadCell(MainForm.width, MainForm.thick, ref force, ref stress)); //starts load cell DAQ
             }
         }
-
-
+        public void Preload()
+        {
+            using (var connection = Zaber.Motion.Ascii.Connection.OpenSerialPort(MainForm.act_com)) //change this based on what computer you're using - port that your controller is connected to 
+            {
+                connection.EnableAlerts(); //connecting to actuator
+                var deviceList = connection.DetectDevices();
+                Console.WriteLine($"Found {deviceList.Length} devices.");
+                var device = deviceList[0];
+                var axis = device.GetAxis(1);
+                //see if next 4 lines are actually required - could cause to pull sample all the way to home??
+                if (!axis.IsHomed())
+                {
+                    axis.Home();
+                }
+                //may need to change this to a timer so that it doesn't screw with the load cell loop
+                while (stress < MainForm.preload) //change the 10 to a user input
+                {
+                    axis.MoveRelative(-1, Units.Length_Micrometres);
+                    Thread.Sleep(100);
+                }
+                Thread.Sleep(5000); //wait 5 seconds before letting the next tasks run
+            }
+        }
 
         //Called upon whenever the start button is pressed 
         public void RunningTest()
